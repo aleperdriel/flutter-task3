@@ -144,46 +144,35 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
-            Row(
-              children: [
-                Column(
-                  children: [
-                    Text(
-                        inputPrev, 
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 64,
-                        )),
-                    Expanded(
-                      child: TextField(
-                          expands: true,
-                          minLines: null,
-                          maxLines: null,
-                          decoration: const InputDecoration(
-                            fillColor: Color.fromARGB(255, 2, 36, 53),
-                            filled: true,
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.blueGrey,
-                                width: 2,
-                                style: BorderStyle.solid,
-                              ),
-                            ),
-                          ),
-                          keyboardType: TextInputType.none,
-                          controller: inputController,
-                          textAlign: TextAlign.right,
-                          textAlignVertical: TextAlignVertical.bottom,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 64,
-                          )),
+            Flexible(
+              flex: 2,
+              child:
+                TextField(
+                    expands: true,
+                    minLines: null,
+                    maxLines: null,
+                    decoration: const InputDecoration(
+                      fillColor: Color.fromARGB(255, 2, 36, 53),
+                      filled: true,
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.blueGrey,
+                          width: 2,
+                          style: BorderStyle.solid,
+                        ),
+                      ),
                     ),
-                  ],
-                ),
-              ],
+                    keyboardType: TextInputType.none,
+                    controller: inputController,
+                    textAlign: TextAlign.right,
+                    textAlignVertical: TextAlignVertical.bottom,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 64,
+                    )),
+              
             ),
-            Expanded(
+            Flexible(
               flex: 3,
               child: Container(
                 decoration: const BoxDecoration(
